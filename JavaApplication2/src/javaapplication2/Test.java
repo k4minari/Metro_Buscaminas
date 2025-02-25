@@ -8,7 +8,7 @@ package javaapplication2;
  *
  * @author sl004
  */
-public class JavaApplication2 {
+public class Test {
 
     /**
      * @param args the command line arguments
