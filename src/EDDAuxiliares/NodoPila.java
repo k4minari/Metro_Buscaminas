@@ -9,5 +9,5 @@ package EDDAuxiliares;
  * @author cesar
  */
 public class NodoPila {
-
+private int eskere;
 }
