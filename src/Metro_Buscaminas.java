@@ -13,7 +13,9 @@ public class Metro_Buscaminas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        // Creación de un tablero 3x3 de prueba
+        Tablero t = new Tablero(3, 3);
+        System.out.println("Tablero creado con éxito.");
     }
     
 }
