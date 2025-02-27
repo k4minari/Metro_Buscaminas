@@ -27,4 +27,9 @@ public class Casilla {
         this.barrida = false;
         this.adyacentes = new ListaAdyacencia();
     }
+    
+    public void Eskere(){
+        System.out.println("Eskere");
+    }
 }
+
