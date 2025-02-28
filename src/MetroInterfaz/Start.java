@@ -59,7 +59,7 @@ public class Start extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(15, 15, 16, 13);
         jPanel1.add(jPanel2, gridBagConstraints);
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
