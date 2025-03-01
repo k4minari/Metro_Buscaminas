@@ -4,6 +4,8 @@
  */
 package MetroInterfaz;
 
+import javax.swing.*;
+
 /**
  *
  * @author ile1
@@ -11,11 +13,14 @@ package MetroInterfaz;
 public class Start extends javax.swing.JFrame {
 
     /**
-     * Creates new form Start
+     * Constructor de la interfaz
      */
     public Start() {
         initComponents();
     }
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -25,7 +30,6 @@ public class Start extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -50,20 +54,14 @@ public class Start extends javax.swing.JFrame {
             .addGap(0, 469, Short.MAX_VALUE)
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 760;
-        gridBagConstraints.ipady = 469;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 15, 16, 13);
-        jPanel1.add(jPanel2, gridBagConstraints);
+        jPanel1.add(jPanel2, new java.awt.GridBagConstraints());
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+  
     /**
      * @param args the command line arguments
      */
@@ -94,7 +92,7 @@ public class Start extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Start().setVisible(true);
+                new Start();
             }
         });
     }
