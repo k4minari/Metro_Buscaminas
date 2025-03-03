@@ -17,9 +17,10 @@ public class Metro_Buscaminas {
      */
     public static void main(String[] args) {
         // Creación de un tablero 3x3 de prueba
-        Tablero t = new Tablero(3, 3);
-        System.out.println("Tablero creado con éxito.");
-        Start S = new Start();
+        // Se crea un tablero de 3 filas x 4 columnas
+        Tablero t = new Tablero(3, 4);
+        System.out.println("Tablero (3x4):");
+        t.mostrarTablero();
         
     }
     

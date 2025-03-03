@@ -10,21 +10,41 @@
  */
 public class ListaCasillas {
     private NodoCasilla cabeza;
-
+    
     /**
-     * Constructor de la lista de casillas vacía.
-     */
-    public ListaCasillas() {
-        this.cabeza = null;
-    }
-
-    /**
-     * Agrega una casilla a la lista de casillas.
-     * @param casilla Casilla a agregar.
+     * Agrega una casilla al final de la lista.
+     * Esto asegura que la primera casilla generada (por ejemplo, A1)
+     * quede en la cabeza de la lista.
+     * @param casilla La casilla a agregar.
      */
     public void agregar(Casilla casilla) {
         NodoCasilla nuevo = new NodoCasilla(casilla);
-        nuevo.siguiente = cabeza;
-        cabeza = nuevo;
+        if (cabeza == null) {
+            cabeza = nuevo;
+        } else {
+            NodoCasilla actual = cabeza;
+            while (actual.getSiguiente() != null) {
+                actual = actual.getSiguiente();
+            }
+            actual.setSiguiente(nuevo);
+        }
+    }
+    
+    /**
+     * Busca y devuelve la casilla que se encuentra en la fila y columna indicadas.
+     * @param fila La fila (0-indexado).
+     * @param columna La columna (0-indexado).
+     * @return La casilla si se encuentra, o null en caso contrario.
+     */
+    public Casilla buscar(int fila, int columna) {
+        NodoCasilla actual = cabeza;
+        while (actual != null) {
+            Casilla c = actual.getCasilla();
+            if (c.getFila() == fila && c.getColumna() == columna) {
+                return c;
+            }
+            actual = actual.getSiguiente();
+        }
+        return null;
     }
 }
