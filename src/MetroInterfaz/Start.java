@@ -27,34 +27,113 @@ public class Start extends javax.swing.JFrame {
     private void initComponents() {
 
         bg = new javax.swing.JPanel();
-        unimet_image = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Bomb1 = new javax.swing.JLabel();
+        bomb2 = new javax.swing.JLabel();
+        Bandera = new javax.swing.JLabel();
         Title = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Title1 = new javax.swing.JLabel();
+        paint1 = new javax.swing.JLabel();
+        paint2 = new javax.swing.JLabel();
+        paint3 = new javax.swing.JLabel();
+        unimet_image = new javax.swing.JLabel();
+        Boom = new javax.swing.JLabel();
+        new_game = new javax.swing.JLabel();
+        new_game1 = new javax.swing.JLabel();
+        new_game2 = new javax.swing.JLabel();
+        new_game3 = new javax.swing.JLabel();
+        new_game4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 500));
 
-        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setBackground(new java.awt.Color(255, 102, 0));
         bg.setPreferredSize(new java.awt.Dimension(800, 500));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 226));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Bomb1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Bomb1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/download-removebg-preview (1).png"))); // NOI18N
+        Bomb1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(Bomb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 130, -1));
+
+        bomb2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/download-removebg-preview (1)_1.png"))); // NOI18N
+        jPanel1.add(bomb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, -1, -1));
+
+        Bandera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/download-removebg-preview.png"))); // NOI18N
+        jPanel1.add(Bandera, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
+
+        Title.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Title.setForeground(new java.awt.Color(0, 0, 0));
+        Title.setText("BUSCAMINAS");
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 130, 30));
+
+        Title1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Title1.setForeground(new java.awt.Color(0, 0, 0));
+        Title1.setText("METRO");
+        Title1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 70, 30));
+
+        paint1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
+        jPanel1.add(paint1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
+
+        paint2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
+        jPanel1.add(paint2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
+
+        paint3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
+        jPanel1.add(paint3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, -1, -1));
+
         unimet_image.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         unimet_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Unimet.png"))); // NOI18N
-        bg.add(unimet_image, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, 60, 90));
+        jPanel1.add(unimet_image, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 90));
 
-        Title.setFont(new java.awt.Font("Impact", 2, 24)); // NOI18N
-        Title.setForeground(new java.awt.Color(0, 0, 0));
-        Title.setText("METRO-BUSCAMINAS");
-        bg.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 200, 30));
+        Boom.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Boom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/istockphoto-1371914725-612x612-removebg-preview.png"))); // NOI18N
+        jPanel1.add(Boom, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 800, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-explode-game-orange-removebg-preview.png"))); // NOI18N
-        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 10, -1, -1));
+        new_game.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        new_game.setForeground(new java.awt.Color(0, 0, 0));
+        new_game.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        new_game.setText("SALIR");
+        jPanel1.add(new_game, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 380, 800, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-cartoon-bomb-bomb-landmine-thumbnail-removebg-preview.png"))); // NOI18N
-        bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 180, 140));
+        new_game1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        new_game1.setForeground(new java.awt.Color(0, 0, 0));
+        new_game1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        new_game1.setText("NUEVO JUEGO");
+        jPanel1.add(new_game1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 260, 800, -1));
 
-        getContentPane().add(bg, java.awt.BorderLayout.PAGE_START);
+        new_game2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        new_game2.setForeground(new java.awt.Color(0, 0, 0));
+        new_game2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(new_game2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 300, 800, -1));
+
+        new_game3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        new_game3.setForeground(new java.awt.Color(0, 0, 0));
+        new_game3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        new_game3.setText("CONTINUAR");
+        jPanel1.add(new_game3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 300, 800, -1));
+
+        new_game4.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        new_game4.setForeground(new java.awt.Color(0, 0, 0));
+        new_game4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        new_game4.setText("ESTADISTICAS");
+        jPanel1.add(new_game4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 340, 800, -1));
+
+        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 760, 460));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -95,10 +174,22 @@ public class Start extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Bandera;
+    private javax.swing.JLabel Bomb1;
+    private javax.swing.JLabel Boom;
     private javax.swing.JLabel Title;
+    private javax.swing.JLabel Title1;
     private javax.swing.JPanel bg;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel bomb2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel new_game;
+    private javax.swing.JLabel new_game1;
+    private javax.swing.JLabel new_game2;
+    private javax.swing.JLabel new_game3;
+    private javax.swing.JLabel new_game4;
+    private javax.swing.JLabel paint1;
+    private javax.swing.JLabel paint2;
+    private javax.swing.JLabel paint3;
     private javax.swing.JLabel unimet_image;
     // End of variables declaration//GEN-END:variables
 }
