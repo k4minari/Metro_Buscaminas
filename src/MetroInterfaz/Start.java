@@ -25,41 +25,36 @@ public class Start extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        bg = new javax.swing.JPanel();
+        unimet_image = new javax.swing.JLabel();
+        Title = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 500));
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setPreferredSize(new java.awt.Dimension(800, 500));
+        bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        unimet_image.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        unimet_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Unimet.png"))); // NOI18N
+        bg.add(unimet_image, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, 60, 90));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 469, Short.MAX_VALUE)
-        );
+        Title.setFont(new java.awt.Font("Impact", 2, 24)); // NOI18N
+        Title.setForeground(new java.awt.Color(0, 0, 0));
+        Title.setText("METRO-BUSCAMINAS");
+        bg.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 200, 30));
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 760;
-        gridBagConstraints.ipady = 469;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 15, 16, 13);
-        jPanel1.add(jPanel2, gridBagConstraints);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-explode-game-orange-removebg-preview.png"))); // NOI18N
+        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 10, -1, -1));
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-cartoon-bomb-bomb-landmine-thumbnail-removebg-preview.png"))); // NOI18N
+        bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 180, 140));
+
+        getContentPane().add(bg, java.awt.BorderLayout.PAGE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,7 +95,10 @@ public class Start extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel Title;
+    private javax.swing.JPanel bg;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel unimet_image;
     // End of variables declaration//GEN-END:variables
 }
