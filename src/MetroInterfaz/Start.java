@@ -38,11 +38,11 @@ public class Start extends javax.swing.JFrame {
         paint3 = new javax.swing.JLabel();
         unimet_image = new javax.swing.JLabel();
         Boom = new javax.swing.JLabel();
-        new_game = new javax.swing.JLabel();
-        new_game1 = new javax.swing.JLabel();
         new_game2 = new javax.swing.JLabel();
-        new_game3 = new javax.swing.JLabel();
-        new_game4 = new javax.swing.JLabel();
+        Salir_button = new javax.swing.JButton();
+        New_game_button1 = new javax.swing.JButton();
+        Continuar_button = new javax.swing.JButton();
+        Estadisticas_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 500));
@@ -93,38 +93,58 @@ public class Start extends javax.swing.JFrame {
         Boom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/istockphoto-1371914725-612x612-removebg-preview.png"))); // NOI18N
         jPanel1.add(Boom, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 800, -1));
 
-        new_game.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        new_game.setForeground(new java.awt.Color(0, 0, 0));
-        new_game.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        new_game.setText("SALIR");
-        new_game.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(new_game, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 80, -1));
-
-        new_game1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        new_game1.setForeground(new java.awt.Color(0, 0, 0));
-        new_game1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        new_game1.setText("NUEVO JUEGO");
-        new_game1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(new_game1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 140, -1));
-
         new_game2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         new_game2.setForeground(new java.awt.Color(0, 0, 0));
         new_game2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel1.add(new_game2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 300, 800, -1));
 
-        new_game3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        new_game3.setForeground(new java.awt.Color(0, 0, 0));
-        new_game3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        new_game3.setText("CONTINUAR");
-        new_game3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(new_game3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 120, -1));
+        Salir_button.setBackground(new java.awt.Color(255, 255, 226));
+        Salir_button.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Salir_button.setForeground(new java.awt.Color(0, 0, 0));
+        Salir_button.setText("SALIR");
+        Salir_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Salir_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Salir_buttonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Salir_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 160, -1));
 
-        new_game4.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        new_game4.setForeground(new java.awt.Color(0, 0, 0));
-        new_game4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        new_game4.setText("ESTADISTICAS");
-        new_game4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(new_game4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 160, 30));
+        New_game_button1.setBackground(new java.awt.Color(255, 255, 226));
+        New_game_button1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        New_game_button1.setForeground(new java.awt.Color(0, 0, 0));
+        New_game_button1.setText("NUEVO JUEGO");
+        New_game_button1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        New_game_button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                New_game_button1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(New_game_button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 160, -1));
+
+        Continuar_button.setBackground(new java.awt.Color(255, 255, 226));
+        Continuar_button.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Continuar_button.setForeground(new java.awt.Color(0, 0, 0));
+        Continuar_button.setText("CONTINUAR");
+        Continuar_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Continuar_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Continuar_buttonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Continuar_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 160, -1));
+
+        Estadisticas_button.setBackground(new java.awt.Color(255, 255, 226));
+        Estadisticas_button.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Estadisticas_button.setForeground(new java.awt.Color(0, 0, 0));
+        Estadisticas_button.setText("ESTADISTICAS");
+        Estadisticas_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Estadisticas_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Estadisticas_buttonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Estadisticas_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 180, -1));
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 760, 460));
 
@@ -142,6 +162,24 @@ public class Start extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Salir_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Salir_buttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Salir_buttonActionPerformed
+
+    private void New_game_button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_New_game_button1ActionPerformed
+        New_game game = new New_game();
+        game.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_New_game_button1ActionPerformed
+
+    private void Continuar_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Continuar_buttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Continuar_buttonActionPerformed
+
+    private void Estadisticas_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Estadisticas_buttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Estadisticas_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,16 +220,16 @@ public class Start extends javax.swing.JFrame {
     private javax.swing.JLabel Bandera;
     private javax.swing.JLabel Bomb1;
     private javax.swing.JLabel Boom;
+    private javax.swing.JButton Continuar_button;
+    private javax.swing.JButton Estadisticas_button;
+    private javax.swing.JButton New_game_button1;
+    private javax.swing.JButton Salir_button;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel Title1;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bomb2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel new_game;
-    private javax.swing.JLabel new_game1;
     private javax.swing.JLabel new_game2;
-    private javax.swing.JLabel new_game3;
-    private javax.swing.JLabel new_game4;
     private javax.swing.JLabel paint1;
     private javax.swing.JLabel paint2;
     private javax.swing.JLabel paint3;

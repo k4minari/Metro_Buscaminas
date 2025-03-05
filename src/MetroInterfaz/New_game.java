@@ -28,6 +28,7 @@ public class New_game extends javax.swing.JFrame {
 
         bg = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         Columnas = new javax.swing.JLabel();
         Minas = new javax.swing.JLabel();
         filas = new javax.swing.JLabel();
@@ -39,7 +40,6 @@ public class New_game extends javax.swing.JFrame {
         paint2 = new javax.swing.JLabel();
         paint3 = new javax.swing.JLabel();
         paint4 = new javax.swing.JLabel();
-        Regresar = new javax.swing.JLabel();
         Boom = new javax.swing.JLabel();
         Boom1 = new javax.swing.JLabel();
         Boom2 = new javax.swing.JLabel();
@@ -54,6 +54,17 @@ public class New_game extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 226));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 226));
+        jButton1.setFont(new java.awt.Font("Impact", 0, 22)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("<<REGRESAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 30));
 
         Columnas.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
         Columnas.setForeground(new java.awt.Color(0, 0, 0));
@@ -107,12 +118,6 @@ public class New_game extends javax.swing.JFrame {
         paint4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
         jPanel1.add(paint4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
-        Regresar.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        Regresar.setForeground(new java.awt.Color(0, 0, 0));
-        Regresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Regresar.setText("<<Regresar");
-        jPanel1.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, -1));
-
         Boom.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Boom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/istockphoto-1371914725-612x612-removebg-preview.png"))); // NOI18N
         jPanel1.add(Boom, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 390, -1));
@@ -142,7 +147,15 @@ public class New_game extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Start menu = new Start();
+        menu.setVisible(true);
+        this.setVisible(false);
+                
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,9 +198,9 @@ public class New_game extends javax.swing.JFrame {
     private javax.swing.JLabel Boom2;
     private javax.swing.JLabel Columnas;
     private javax.swing.JLabel Minas;
-    private javax.swing.JLabel Regresar;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel filas;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner jSpinner_Columna;
     private javax.swing.JSpinner jSpinner_Filas;
