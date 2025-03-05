@@ -97,13 +97,15 @@ public class Start extends javax.swing.JFrame {
         new_game.setForeground(new java.awt.Color(0, 0, 0));
         new_game.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         new_game.setText("SALIR");
-        jPanel1.add(new_game, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 380, 800, -1));
+        new_game.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(new_game, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 80, -1));
 
         new_game1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         new_game1.setForeground(new java.awt.Color(0, 0, 0));
         new_game1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         new_game1.setText("NUEVO JUEGO");
-        jPanel1.add(new_game1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 260, 800, -1));
+        new_game1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(new_game1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 140, -1));
 
         new_game2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         new_game2.setForeground(new java.awt.Color(0, 0, 0));
@@ -114,13 +116,15 @@ public class Start extends javax.swing.JFrame {
         new_game3.setForeground(new java.awt.Color(0, 0, 0));
         new_game3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         new_game3.setText("CONTINUAR");
-        jPanel1.add(new_game3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 300, 800, -1));
+        new_game3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(new_game3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 120, -1));
 
         new_game4.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         new_game4.setForeground(new java.awt.Color(0, 0, 0));
         new_game4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         new_game4.setText("ESTADISTICAS");
-        jPanel1.add(new_game4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 340, 800, -1));
+        new_game4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(new_game4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 160, 30));
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 760, 460));
 
@@ -136,6 +140,7 @@ public class Start extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
