@@ -8,12 +8,12 @@ package MetroInterfaz;
  *
  * @author ile1
  */
-public class Estadisticas extends javax.swing.JFrame {
+public class Winner extends javax.swing.JFrame {
 
     /**
      * Creates new form Start
      */
-    public Estadisticas() {
+    public Winner() {
         initComponents();
     }
 
@@ -28,33 +28,60 @@ public class Estadisticas extends javax.swing.JFrame {
 
         bg = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        Bomb1 = new javax.swing.JLabel();
-        bomb2 = new javax.swing.JLabel();
-        Title1 = new javax.swing.JLabel();
+        Perdiste = new javax.swing.JLabel();
+        Tails = new javax.swing.JLabel();
+        raya2 = new javax.swing.JLabel();
+        raya1 = new javax.swing.JLabel();
+        boom = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 500));
 
-        bg.setBackground(new java.awt.Color(255, 102, 0));
+        bg.setBackground(new java.awt.Color(255, 0, 0));
         bg.setPreferredSize(new java.awt.Dimension(800, 500));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 226));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Bomb1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Bomb1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/download-removebg-preview (1).png"))); // NOI18N
-        Bomb1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(Bomb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, -1));
+        Perdiste.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Perdiste.setForeground(new java.awt.Color(255, 255, 255));
+        Perdiste.setText("P E R D I S T E");
+        jPanel1.add(Perdiste, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
 
-        bomb2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/download-removebg-preview (1)_1.png"))); // NOI18N
-        jPanel1.add(bomb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, -1, -1));
+        Tails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Tails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/tails_special_stage_falling_gif__by_foxeygamer87sonic_dg96uso-fullview-removebg-preview (1).png"))); // NOI18N
+        jPanel1.add(Tails, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 760, -1));
 
-        Title1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        Title1.setForeground(new java.awt.Color(0, 0, 0));
-        Title1.setText("METRO");
-        Title1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 70, 30));
+        raya2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lovepik-black-brushes-brushes-brushes-elements-png-image_400808292_wh1200-removebg-preview.png"))); // NOI18N
+        jPanel1.add(raya2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
+
+        raya1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lovepik-black-brushes-brushes-brushes-elements-png-image_400808292_wh1200-removebg-preview.png"))); // NOI18N
+        jPanel1.add(raya1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
+
+        boom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/istockphoto-1371914725-612x612-removebg-preview.png"))); // NOI18N
+        jPanel1.add(boom, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(0, 153, 0));
+        jButton1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("NUEVO JUEGO");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 380, -1));
+
+        jButton4.setBackground(new java.awt.Color(153, 0, 0));
+        jButton4.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("VOLVER A INTENTAR");
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 760, -1));
+
+        jButton5.setBackground(new java.awt.Color(0, 0, 0));
+        jButton5.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("MENU DE INICIO");
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 380, -1));
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 760, 460));
 
@@ -109,10 +136,15 @@ public class Estadisticas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Bomb1;
-    private javax.swing.JLabel Title1;
+    private javax.swing.JLabel Perdiste;
+    private javax.swing.JLabel Tails;
     private javax.swing.JPanel bg;
-    private javax.swing.JLabel bomb2;
+    private javax.swing.JLabel boom;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel raya1;
+    private javax.swing.JLabel raya2;
     // End of variables declaration//GEN-END:variables
 }
