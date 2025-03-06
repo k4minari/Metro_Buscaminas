@@ -29,59 +29,91 @@ public class Winner extends javax.swing.JFrame {
         bg = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         Perdiste = new javax.swing.JLabel();
-        Tails = new javax.swing.JLabel();
-        raya2 = new javax.swing.JLabel();
-        raya1 = new javax.swing.JLabel();
-        boom = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        Animales1 = new javax.swing.JLabel();
+        Animales2 = new javax.swing.JLabel();
+        NuevoJuego = new javax.swing.JButton();
+        Volver = new javax.swing.JButton();
+        Menu = new javax.swing.JButton();
+        paint1 = new javax.swing.JLabel();
+        paint2 = new javax.swing.JLabel();
+        paint3 = new javax.swing.JLabel();
+        paint4 = new javax.swing.JLabel();
+        Grass1 = new javax.swing.JLabel();
+        Grass2 = new javax.swing.JLabel();
+        Grass3 = new javax.swing.JLabel();
+        Grass4 = new javax.swing.JLabel();
+        Grass5 = new javax.swing.JLabel();
+        tails = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 500));
 
-        bg.setBackground(new java.awt.Color(255, 0, 0));
+        bg.setBackground(new java.awt.Color(51, 255, 51));
         bg.setPreferredSize(new java.awt.Dimension(800, 500));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Perdiste.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        Perdiste.setForeground(new java.awt.Color(255, 255, 255));
-        Perdiste.setText("P E R D I S T E");
-        jPanel1.add(Perdiste, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+        Perdiste.setForeground(new java.awt.Color(0, 0, 0));
+        Perdiste.setText("G A N A S T E");
+        jPanel1.add(Perdiste, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
-        Tails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/tails_special_stage_falling_gif__by_foxeygamer87sonic_dg96uso-fullview-removebg-preview (1).png"))); // NOI18N
-        jPanel1.add(Tails, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 760, -1));
+        Animales1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/5dfdb9625e600-removebg-preview.png"))); // NOI18N
+        jPanel1.add(Animales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
-        raya2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lovepik-black-brushes-brushes-brushes-elements-png-image_400808292_wh1200-removebg-preview.png"))); // NOI18N
-        jPanel1.add(raya2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
+        Animales2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/_2.png"))); // NOI18N
+        jPanel1.add(Animales2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, -1, -1));
 
-        raya1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lovepik-black-brushes-brushes-brushes-elements-png-image_400808292_wh1200-removebg-preview.png"))); // NOI18N
-        jPanel1.add(raya1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
+        NuevoJuego.setBackground(new java.awt.Color(0, 153, 0));
+        NuevoJuego.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        NuevoJuego.setForeground(new java.awt.Color(255, 255, 255));
+        NuevoJuego.setText("NUEVO JUEGO");
+        jPanel1.add(NuevoJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 380, -1));
 
-        boom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/istockphoto-1371914725-612x612-removebg-preview.png"))); // NOI18N
-        jPanel1.add(boom, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+        Volver.setBackground(new java.awt.Color(1, 148, 68));
+        Volver.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        Volver.setForeground(new java.awt.Color(255, 255, 255));
+        Volver.setText("VOLVER A INTENTAR");
+        jPanel1.add(Volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 760, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 0));
-        jButton1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("NUEVO JUEGO");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 380, -1));
+        Menu.setBackground(new java.awt.Color(0, 0, 0));
+        Menu.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        Menu.setForeground(new java.awt.Color(255, 255, 255));
+        Menu.setText("MENU DE INICIO");
+        jPanel1.add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 380, -1));
 
-        jButton4.setBackground(new java.awt.Color(153, 0, 0));
-        jButton4.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("VOLVER A INTENTAR");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 760, -1));
+        paint1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
+        jPanel1.add(paint1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, -1, -1));
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 0));
-        jButton5.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("MENU DE INICIO");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 380, -1));
+        paint2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
+        jPanel1.add(paint2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, -1, -1));
+
+        paint3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
+        jPanel1.add(paint3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, -1, -1));
+
+        paint4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
+        jPanel1.add(paint4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
+
+        Grass1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grass-background-design-template-vector-21307391-removebg-preview (1).png"))); // NOI18N
+        jPanel1.add(Grass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 280, 90, -1));
+
+        Grass2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grass-background-design-template-vector-21307391-removebg-preview (1).png"))); // NOI18N
+        jPanel1.add(Grass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, -1));
+
+        Grass3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grass-background-design-template-vector-21307391-removebg-preview (1).png"))); // NOI18N
+        jPanel1.add(Grass3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, -1, -1));
+
+        Grass4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grass-background-design-template-vector-21307391-removebg-preview (1).png"))); // NOI18N
+        jPanel1.add(Grass4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, -1));
+
+        Grass5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grass-background-design-template-vector-21307391-removebg-preview (1).png"))); // NOI18N
+        jPanel1.add(Grass5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, -1));
+
+        tails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/tails-sprite-sonic-the-hedgehog-png-favpng-4v5Sz99z4E9agfD1uvLHZ6HQ5-removebg-preview.png"))); // NOI18N
+        jPanel1.add(tails, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 760, -1));
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 760, 460));
 
@@ -136,15 +168,23 @@ public class Winner extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Animales1;
+    private javax.swing.JLabel Animales2;
+    private javax.swing.JLabel Grass1;
+    private javax.swing.JLabel Grass2;
+    private javax.swing.JLabel Grass3;
+    private javax.swing.JLabel Grass4;
+    private javax.swing.JLabel Grass5;
+    private javax.swing.JButton Menu;
+    private javax.swing.JButton NuevoJuego;
     private javax.swing.JLabel Perdiste;
-    private javax.swing.JLabel Tails;
+    private javax.swing.JButton Volver;
     private javax.swing.JPanel bg;
-    private javax.swing.JLabel boom;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel raya1;
-    private javax.swing.JLabel raya2;
+    private javax.swing.JLabel paint1;
+    private javax.swing.JLabel paint2;
+    private javax.swing.JLabel paint3;
+    private javax.swing.JLabel paint4;
+    private javax.swing.JLabel tails;
     // End of variables declaration//GEN-END:variables
 }
