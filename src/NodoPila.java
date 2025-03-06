@@ -6,19 +6,19 @@
 /**
  *
  * @author cesar
- * Representa un nodo en la lista de adyacencia de una casilla.
  */
-public class NodoLista {
+public class NodoPila {
     private Casilla casilla;
-    private NodoLista siguiente;
+    private NodoPila siguiente;
     
-    public NodoLista(Casilla casilla) {
+    public NodoPila(Casilla casilla) {
         this.casilla = casilla;
     }
     
     public Casilla getCasilla() { return casilla; }
     public void setCasilla(Casilla casilla) { this.casilla = casilla; }
     
-    public NodoLista getSiguiente() { return siguiente; }
-    public void setSiguiente(NodoLista siguiente) { this.siguiente = siguiente; }
+    public NodoPila getSiguiente() { return siguiente; }
+    public void setSiguiente(NodoPila siguiente) { this.siguiente = siguiente; }
 }
+

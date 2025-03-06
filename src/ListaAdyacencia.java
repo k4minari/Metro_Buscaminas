@@ -10,21 +10,20 @@
  */
 public class ListaAdyacencia {
     private NodoLista cabeza;
-
-    /**
-     * Constructor de la lista de adyacencia vacía.
-     */
-    public ListaAdyacencia() {
-        this.cabeza = null;
-    }
-
-    /**
-     * Agrega una casilla a la lista de adyacencia.
-     * @param casilla Casilla a agregar.
-     */
+    
     public void agregar(Casilla casilla) {
         NodoLista nuevo = new NodoLista(casilla);
-        nuevo.siguiente = cabeza;
-        cabeza = nuevo;
+        if (cabeza == null) {
+            cabeza = nuevo;
+        } else {
+            NodoLista actual = cabeza;
+            while (actual.getSiguiente() != null) {
+                actual = actual.getSiguiente();
+            }
+            actual.setSiguiente(nuevo);
+        }
     }
+    
+    public NodoLista getCabeza() { return cabeza; }
+    public void setCabeza(NodoLista cabeza) { this.cabeza = cabeza; }
 }

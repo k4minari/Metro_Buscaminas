@@ -9,22 +9,33 @@
  * Lista enlazada para almacenar todas las casillas del tablero.
  */
 public class ListaCasillas {
-    private NodoCasilla cabeza;
-
-    /**
-     * Constructor de la lista de casillas vacía.
-     */
-    public ListaCasillas() {
-        this.cabeza = null;
-    }
-
-    /**
-     * Agrega una casilla a la lista de casillas.
-     * @param casilla Casilla a agregar.
-     */
+   private NodoCasilla cabeza;
+    
     public void agregar(Casilla casilla) {
         NodoCasilla nuevo = new NodoCasilla(casilla);
-        nuevo.siguiente = cabeza;
-        cabeza = nuevo;
+        if (cabeza == null) {
+            cabeza = nuevo;
+        } else {
+            NodoCasilla actual = cabeza;
+            while (actual.getSiguiente() != null) {
+                actual = actual.getSiguiente();
+            }
+            actual.setSiguiente(nuevo);
+        }
     }
+    
+    public Casilla buscar(int fila, int columna) {
+        NodoCasilla actual = cabeza;
+        while (actual != null) {
+            Casilla c = actual.getCasilla();
+            if (c.getFila() == fila && c.getColumna() == columna) {
+                return c;
+            }
+            actual = actual.getSiguiente();
+        }
+        return null;
+    }
+    
+    public NodoCasilla getCabeza() { return cabeza; }
+    public void setCabeza(NodoCasilla cabeza) { this.cabeza = cabeza; }
 }
