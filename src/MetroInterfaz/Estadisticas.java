@@ -8,11 +8,12 @@ package MetroInterfaz;
  *
  * @author ile1
  */
-public class Start extends javax.swing.JFrame {
+public class Estadisticas extends javax.swing.JFrame {
 
-    int mouseX, mouseY;
-    
-    public Start() {
+    /**
+     * Creates new form Start
+     */
+    public Estadisticas() {
         initComponents();
     }
 
@@ -44,22 +45,10 @@ public class Start extends javax.swing.JFrame {
         Estadisticas_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        setResizable(false);
         setSize(new java.awt.Dimension(800, 500));
 
         bg.setBackground(new java.awt.Color(255, 102, 0));
         bg.setPreferredSize(new java.awt.Dimension(800, 500));
-        bg.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                bgMouseDragged(evt);
-            }
-        });
-        bg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                bgMousePressed(evt);
-            }
-        });
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 226));
@@ -175,7 +164,7 @@ public class Start extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Salir_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Salir_buttonActionPerformed
-        System.exit(0);
+        // TODO add your handling code here:
     }//GEN-LAST:event_Salir_buttonActionPerformed
 
     private void New_game_button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_New_game_button1ActionPerformed
@@ -191,17 +180,6 @@ public class Start extends javax.swing.JFrame {
     private void Estadisticas_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Estadisticas_buttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Estadisticas_buttonActionPerformed
-
-    private void bgMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMousePressed
-        mouseX = evt.getX();
-        mouseY = evt.getY();
-    }//GEN-LAST:event_bgMousePressed
-
-    private void bgMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseDragged
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x - mouseX, y - mouseY);
-    }//GEN-LAST:event_bgMouseDragged
 
     /**
      * @param args the command line arguments
