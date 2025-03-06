@@ -10,9 +10,8 @@ package MetroInterfaz;
  */
 public class New_game extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Start
-     */
+    int mouseX, mouseY;
+    
     public New_game() {
         initComponents();
     }
@@ -46,10 +45,22 @@ public class New_game extends javax.swing.JFrame {
         traza_negra = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
         setSize(new java.awt.Dimension(800, 500));
 
         bg.setBackground(new java.awt.Color(255, 102, 0));
         bg.setPreferredSize(new java.awt.Dimension(800, 500));
+        bg.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                bgMouseDragged(evt);
+            }
+        });
+        bg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                bgMousePressed(evt);
+            }
+        });
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 226));
@@ -70,21 +81,21 @@ public class New_game extends javax.swing.JFrame {
         Columnas.setForeground(new java.awt.Color(0, 0, 0));
         Columnas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Columnas.setText("COLUMNAS");
-        Columnas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Columnas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(Columnas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 130, 50));
 
         Minas.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
         Minas.setForeground(new java.awt.Color(0, 0, 0));
         Minas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Minas.setText("MINAS");
-        Minas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Minas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(Minas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 140, 50));
 
         filas.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
         filas.setForeground(new java.awt.Color(0, 0, 0));
         filas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         filas.setText("FILAS");
-        filas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        filas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(filas, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 130, 50));
 
         listo.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
@@ -156,6 +167,18 @@ public class New_game extends javax.swing.JFrame {
         this.setVisible(false);
                 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void bgMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMousePressed
+        mouseX = evt.getX();
+        mouseY = evt.getY();
+    }//GEN-LAST:event_bgMousePressed
+
+    private void bgMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - mouseX, y - mouseY);
+                
+    }//GEN-LAST:event_bgMouseDragged
 
     /**
      * @param args the command line arguments
