@@ -1,3 +1,7 @@
+package EDDauxiliares;
+
+import LogicaJuego.Casilla;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -11,6 +15,10 @@
 public class ListaAdyacencia {
     private NodoLista cabeza;
     
+    /**
+     * Agrega una casilla al final de la lista de adyacencia.
+     * @param casilla Casilla que se desea enlazar como adyacente.
+     */
     public void agregar(Casilla casilla) {
         NodoLista nuevo = new NodoLista(casilla);
         if (cabeza == null) {
@@ -24,6 +32,9 @@ public class ListaAdyacencia {
         }
     }
     
+    /** @return El nodo cabeza de la lista de adyacencia. */
     public NodoLista getCabeza() { return cabeza; }
+    /** Asigna la cabeza de la lista de adyacencia.
+     * @param cabeza */
     public void setCabeza(NodoLista cabeza) { this.cabeza = cabeza; }
 }

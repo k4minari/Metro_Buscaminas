@@ -1,3 +1,8 @@
+package LogicaJuego;
+
+
+import EDDauxiliares.ListaAdyacencia;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -16,12 +21,12 @@ public class Casilla {
     private boolean marcada;
     private int minasAdyacentes;
     private ListaAdyacencia adyacentes;
-    
-    // Se quita la referencia a Tablero (si se prefiere),
-    // o se puede mantener un puntero a Tablero si lo necesitas
-    // para checkIfWin, etc. 
-    //private Tablero tablero;
 
+    /**
+     * Constructor que establece la posición de la Casilla (fila, columna).
+     * @param fila    Fila en la que se ubica la casilla.
+     * @param columna Columna en la que se ubica la casilla.
+     */
     public Casilla(int fila, int columna) {
         this.fila = fila;
         this.columna = columna;
@@ -32,7 +37,7 @@ public class Casilla {
         this.adyacentes = new ListaAdyacencia();
     }
     
-    // Getters y setters
+    // Getters y setters:
     public int getFila() { return fila; }
     public int getColumna() { return columna; }
     public boolean isTieneMina() { return tieneMina; }
@@ -47,6 +52,11 @@ public class Casilla {
     public ListaAdyacencia getAdyacentes() { return adyacentes; }
     public void setAdyacentes(ListaAdyacencia adyacentes) { this.adyacentes = adyacentes; }
     
+    /**
+     * Genera un identificador textual para la casilla, 
+     * usando la columna convertida en letra (A, B, C...) y la fila + 1.
+     * @return Una cadena tipo "A1", "B2", etc.
+     */
     public String getID() {
         char letra = (char)('A' + columna);
         int numero = fila + 1;
