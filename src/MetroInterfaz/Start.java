@@ -190,7 +190,9 @@ public class Start extends javax.swing.JFrame {
     }//GEN-LAST:event_Continuar_buttonActionPerformed
 
     private void TutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TutorialActionPerformed
-        // TODO add your handling code here:
+        Guia tuto = new Guia();
+        tuto.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_TutorialActionPerformed
 
     private void bgMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMousePressed

@@ -4,6 +4,7 @@
  */
 package MetroInterfaz;
 
+import LogicaJuego.Juego;
 /**
  *
  * @author ile1
@@ -103,6 +104,11 @@ public class New_game extends javax.swing.JFrame {
         listo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         listo.setText("¡LISTO!");
         listo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        listo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listoMouseClicked(evt);
+            }
+        });
         jPanel1.add(listo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 130, 40));
 
         jSpinner_Columna.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
@@ -179,6 +185,11 @@ public class New_game extends javax.swing.JFrame {
         this.setLocation(x - mouseX, y - mouseY);
                 
     }//GEN-LAST:event_bgMouseDragged
+
+    private void listoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listoMouseClicked
+        Juego juego = new Juego();
+        juego.seleccionarModoJuego();
+    }//GEN-LAST:event_listoMouseClicked
 
     /**
      * @param args the command line arguments

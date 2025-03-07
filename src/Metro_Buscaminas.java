@@ -1,5 +1,6 @@
 
 import LogicaJuego.Juego;
+import MetroInterfaz.Start;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -16,8 +17,14 @@ public class Metro_Buscaminas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Juego juego = new Juego();
-        juego.seleccionarModoJuego(); 
+        
+        Start start = new Start();
+        
+        start.setVisible(true);
+        
+        //Juego juego = new Juego();
+        
+        //juego.seleccionarModoJuego(); 
     }
     
 }
