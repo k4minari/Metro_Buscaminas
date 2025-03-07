@@ -9,15 +9,38 @@
  * Representa un nodo en la lista de casillas del tablero.
  */
 public class NodoCasilla {
-    public Casilla casilla;
-    public NodoCasilla siguiente;
-
+    private Casilla casilla;
+    private NodoCasilla siguiente;
+    
     /**
-     * Constructor del nodo.
-     * @param casilla Referencia a la casilla que almacena este nodo.
+     * Constructor del nodo, que recibe una casilla.
+     * @param casilla La casilla a almacenar.
      */
     public NodoCasilla(Casilla casilla) {
         this.casilla = casilla;
-        this.siguiente = null;
+    }
+    
+    /**
+     * Devuelve la casilla almacenada.
+     * @return La casilla.
+     */
+    public Casilla getCasilla() {
+        return casilla;
+    }
+    
+    /**
+     * Devuelve el siguiente nodo en la lista.
+     * @return El siguiente nodo.
+     */
+    public NodoCasilla getSiguiente() {
+        return siguiente;
+    }
+    
+    /**
+     * Establece el siguiente nodo en la lista.
+     * @param siguiente El nodo que seguirá.
+     */
+    public void setSiguiente(NodoCasilla siguiente) {
+        this.siguiente = siguiente;
     }
 }
