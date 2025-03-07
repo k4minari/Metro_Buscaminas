@@ -41,7 +41,7 @@ public class Start extends javax.swing.JFrame {
         Salir_button = new javax.swing.JButton();
         New_game_button1 = new javax.swing.JButton();
         Continuar_button = new javax.swing.JButton();
-        Estadisticas_button = new javax.swing.JButton();
+        Tutorial = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -145,17 +145,18 @@ public class Start extends javax.swing.JFrame {
         });
         jPanel1.add(Continuar_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 160, -1));
 
-        Estadisticas_button.setBackground(new java.awt.Color(255, 255, 226));
-        Estadisticas_button.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        Estadisticas_button.setForeground(new java.awt.Color(0, 0, 0));
-        Estadisticas_button.setText("ESTADISTICAS");
-        Estadisticas_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Estadisticas_button.addActionListener(new java.awt.event.ActionListener() {
+        Tutorial.setBackground(new java.awt.Color(255, 255, 226));
+        Tutorial.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Tutorial.setForeground(new java.awt.Color(0, 0, 0));
+        Tutorial.setText("¿COMO JUGAR?");
+        Tutorial.setActionCommand("¿COMO JUGAR?");
+        Tutorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Tutorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Estadisticas_buttonActionPerformed(evt);
+                TutorialActionPerformed(evt);
             }
         });
-        jPanel1.add(Estadisticas_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 180, -1));
+        jPanel1.add(Tutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 180, -1));
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 760, 460));
 
@@ -188,9 +189,9 @@ public class Start extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Continuar_buttonActionPerformed
 
-    private void Estadisticas_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Estadisticas_buttonActionPerformed
+    private void TutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TutorialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Estadisticas_buttonActionPerformed
+    }//GEN-LAST:event_TutorialActionPerformed
 
     private void bgMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMousePressed
         mouseX = evt.getX();
@@ -243,11 +244,11 @@ public class Start extends javax.swing.JFrame {
     private javax.swing.JLabel Bomb1;
     private javax.swing.JLabel Boom;
     private javax.swing.JButton Continuar_button;
-    private javax.swing.JButton Estadisticas_button;
     private javax.swing.JButton New_game_button1;
     private javax.swing.JButton Salir_button;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel Title1;
+    private javax.swing.JButton Tutorial;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bomb2;
     private javax.swing.JPanel jPanel1;
