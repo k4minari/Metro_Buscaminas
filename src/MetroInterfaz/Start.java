@@ -149,7 +149,6 @@ public class Start extends javax.swing.JFrame {
         Tutorial.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         Tutorial.setForeground(new java.awt.Color(0, 0, 0));
         Tutorial.setText("¿COMO JUGAR?");
-        Tutorial.setActionCommand("¿COMO JUGAR?");
         Tutorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Tutorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
