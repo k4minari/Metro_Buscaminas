@@ -28,11 +28,12 @@ public class New_game extends javax.swing.JFrame {
 
         bg = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        menu = new javax.swing.JButton();
         Columnas = new javax.swing.JLabel();
         Minas = new javax.swing.JLabel();
-        NumMinas = new javax.swing.JTextField();
         filas = new javax.swing.JLabel();
         listo = new javax.swing.JLabel();
+        jSpinner_Mina = new javax.swing.JSpinner();
         jSpinner_Columna = new javax.swing.JSpinner();
         jSpinner_Filas = new javax.swing.JSpinner();
         paint1 = new javax.swing.JLabel();
@@ -43,7 +44,6 @@ public class New_game extends javax.swing.JFrame {
         Boom1 = new javax.swing.JLabel();
         Boom2 = new javax.swing.JLabel();
         traza_negra = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -67,6 +67,17 @@ public class New_game extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 226));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        menu.setBackground(new java.awt.Color(255, 255, 226));
+        menu.setFont(new java.awt.Font("Impact", 0, 22)); // NOI18N
+        menu.setForeground(new java.awt.Color(0, 0, 0));
+        menu.setText("<<REGRESAR");
+        menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuActionPerformed(evt);
+            }
+        });
+        jPanel1.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 30));
+
         Columnas.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
         Columnas.setForeground(new java.awt.Color(0, 0, 0));
         Columnas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -80,15 +91,6 @@ public class New_game extends javax.swing.JFrame {
         Minas.setText("MINAS");
         Minas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(Minas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 140, 50));
-
-        NumMinas.setBackground(new java.awt.Color(255, 255, 255));
-        NumMinas.setForeground(new java.awt.Color(0, 0, 0));
-        NumMinas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NumMinasActionPerformed(evt);
-            }
-        });
-        jPanel1.add(NumMinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, -1, -1));
 
         filas.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
         filas.setForeground(new java.awt.Color(0, 0, 0));
@@ -108,6 +110,10 @@ public class New_game extends javax.swing.JFrame {
             }
         });
         jPanel1.add(listo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 130, 40));
+
+        jSpinner_Mina.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jSpinner_Mina.setModel(new javax.swing.SpinnerNumberModel(1, 1, 100, 1));
+        jPanel1.add(jSpinner_Mina, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 60, 30));
 
         jSpinner_Columna.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jSpinner_Columna.setModel(new javax.swing.SpinnerNumberModel(3, 3, 10, 1));
@@ -144,17 +150,6 @@ public class New_game extends javax.swing.JFrame {
         traza_negra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lovepik-black-brushes-brushes-brushes-elements-png-image_400808292_wh1200-removebg-preview.png"))); // NOI18N
         jPanel1.add(traza_negra, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 150, 120));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 226));
-        jButton2.setFont(new java.awt.Font("Impact", 0, 22)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("<<REGRESAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 30));
-
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 760, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -185,17 +180,31 @@ public class New_game extends javax.swing.JFrame {
     }//GEN-LAST:event_bgMouseDragged
 
     private void listoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listoMouseClicked
-        Juego juego = new Juego();
-        juego.seleccionarModoJuego();
+        
+        int colum = (int) jSpinner_Columna.getValue();
+        int fila = (int) jSpinner_Filas.getValue();
+        int minas = (int) jSpinner_Mina.getValue();
+        
+        int multiplicacion = colum * fila;
+        
+        if(minas < multiplicacion && minas >= 1){
+            System.out.println("dale flaco");
+        }else{
+            System.out.println("nao nao");
+        
+        }
+        
+        
+        
+        //Juego juego = new Juego();
+        //juego.seleccionarModoJuego();
     }//GEN-LAST:event_listoMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void NumMinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumMinasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NumMinasActionPerformed
+    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
+        Start menu = new Start();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_menuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,14 +247,14 @@ public class New_game extends javax.swing.JFrame {
     private javax.swing.JLabel Boom2;
     private javax.swing.JLabel Columnas;
     private javax.swing.JLabel Minas;
-    private javax.swing.JTextField NumMinas;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel filas;
-    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner jSpinner_Columna;
     private javax.swing.JSpinner jSpinner_Filas;
+    private javax.swing.JSpinner jSpinner_Mina;
     private javax.swing.JLabel listo;
+    private javax.swing.JButton menu;
     private javax.swing.JLabel paint1;
     private javax.swing.JLabel paint2;
     private javax.swing.JLabel paint3;
