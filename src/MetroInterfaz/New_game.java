@@ -5,6 +5,8 @@
 package MetroInterfaz;
 
 import LogicaJuego.Juego;
+import LogicaJuego.Tablero;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ile1
@@ -188,10 +190,14 @@ public class New_game extends javax.swing.JFrame {
         int multiplicacion = colum * fila;
         
         if(minas < multiplicacion && minas >= 1){
-            System.out.println("dale flaco");
+            Juego juego = new Juego();
+            juego.iniciarJuegoNuevo(fila, colum, minas);
+            this.setVisible(false);
         }else{
-            System.out.println("nao nao");
-        
+            String error = "El numero de minas excede el numero de casillas. "
+                    + "Intenta nuevamente";
+            JOptionPane.showMessageDialog(null, error, "Error",
+                    JOptionPane.ERROR_MESSAGE);
         }
         
         
