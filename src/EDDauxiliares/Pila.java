@@ -2,7 +2,6 @@ package EDDauxiliares;
 
 
 import LogicaJuego.Casilla;
-import EDDauxiliares.NodoPila;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
