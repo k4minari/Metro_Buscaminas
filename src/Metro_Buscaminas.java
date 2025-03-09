@@ -19,12 +19,7 @@ public class Metro_Buscaminas {
     public static void main(String[] args) {
         
         Start start = new Start();
-        
         start.setVisible(true);
-        
-        //Juego juego = new Juego();
-        
-        //juego.seleccionarModoJuego(); 
     }
     
 }
