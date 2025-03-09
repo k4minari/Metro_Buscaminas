@@ -28,11 +28,12 @@ public class Winner extends javax.swing.JFrame {
 
         bg = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        Perdiste = new javax.swing.JLabel();
+        Ganaste = new javax.swing.JLabel();
         Animales1 = new javax.swing.JLabel();
         Animales2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        Ganaste2 = new javax.swing.JLabel();
         NuevoJuego = new javax.swing.JButton();
-        Volver = new javax.swing.JButton();
         Menu = new javax.swing.JButton();
         paint1 = new javax.swing.JLabel();
         paint2 = new javax.swing.JLabel();
@@ -55,10 +56,10 @@ public class Winner extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Perdiste.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        Perdiste.setForeground(new java.awt.Color(0, 0, 0));
-        Perdiste.setText("G A N A S T E");
-        jPanel1.add(Perdiste, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
+        Ganaste.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Ganaste.setForeground(new java.awt.Color(0, 0, 0));
+        Ganaste.setText("G A N A S T E");
+        jPanel1.add(Ganaste, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
         Animales1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/5dfdb9625e600-removebg-preview.png"))); // NOI18N
         jPanel1.add(Animales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
@@ -66,17 +67,34 @@ public class Winner extends javax.swing.JFrame {
         Animales2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/_2.png"))); // NOI18N
         jPanel1.add(Animales2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, -1, -1));
 
+        jPanel2.setBackground(new java.awt.Color(0, 153, 0));
+
+        Ganaste2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Ganaste2.setForeground(new java.awt.Color(255, 255, 255));
+        Ganaste2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ganaste2.setText("¡ ¡ ¡ FELICIDADES ! ! !");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Ganaste2, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Ganaste2)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 760, 50));
+
         NuevoJuego.setBackground(new java.awt.Color(0, 153, 0));
         NuevoJuego.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         NuevoJuego.setForeground(new java.awt.Color(255, 255, 255));
         NuevoJuego.setText("NUEVO JUEGO");
         jPanel1.add(NuevoJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 380, -1));
-
-        Volver.setBackground(new java.awt.Color(1, 148, 68));
-        Volver.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        Volver.setForeground(new java.awt.Color(255, 255, 255));
-        Volver.setText("VOLVER A INTENTAR");
-        jPanel1.add(Volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 760, -1));
 
         Menu.setBackground(new java.awt.Color(0, 0, 0));
         Menu.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
@@ -170,6 +188,8 @@ public class Winner extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Animales1;
     private javax.swing.JLabel Animales2;
+    private javax.swing.JLabel Ganaste;
+    private javax.swing.JLabel Ganaste2;
     private javax.swing.JLabel Grass1;
     private javax.swing.JLabel Grass2;
     private javax.swing.JLabel Grass3;
@@ -177,10 +197,9 @@ public class Winner extends javax.swing.JFrame {
     private javax.swing.JLabel Grass5;
     private javax.swing.JButton Menu;
     private javax.swing.JButton NuevoJuego;
-    private javax.swing.JLabel Perdiste;
-    private javax.swing.JButton Volver;
     private javax.swing.JPanel bg;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel paint1;
     private javax.swing.JLabel paint2;
     private javax.swing.JLabel paint3;

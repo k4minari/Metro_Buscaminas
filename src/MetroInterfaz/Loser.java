@@ -33,8 +33,9 @@ public class Loser extends javax.swing.JFrame {
         raya2 = new javax.swing.JLabel();
         raya1 = new javax.swing.JLabel();
         boom = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        Perdiste1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,22 +66,34 @@ public class Loser extends javax.swing.JFrame {
         boom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/istockphoto-1371914725-612x612-removebg-preview.png"))); // NOI18N
         jPanel1.add(boom, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
 
+        jPanel2.setBackground(new java.awt.Color(153, 0, 0));
+
+        Perdiste1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Perdiste1.setForeground(new java.awt.Color(255, 255, 255));
+        Perdiste1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Perdiste1.setText("VUELVE A INTENTARLO");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Perdiste1, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Perdiste1)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 760, 50));
+
         jButton1.setBackground(new java.awt.Color(0, 153, 0));
         jButton1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("NUEVO JUEGO");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 380, -1));
-
-        jButton4.setBackground(new java.awt.Color(153, 0, 0));
-        jButton4.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("VOLVER A INTENTAR");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 760, -1));
 
         jButton5.setBackground(new java.awt.Color(0, 0, 0));
         jButton5.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
@@ -104,10 +117,6 @@ public class Loser extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,13 +155,14 @@ public class Loser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Perdiste;
+    private javax.swing.JLabel Perdiste1;
     private javax.swing.JLabel Tails;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel boom;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel raya1;
     private javax.swing.JLabel raya2;
     // End of variables declaration//GEN-END:variables
