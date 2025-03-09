@@ -10,9 +10,8 @@ package MetroInterfaz;
  */
 public class Winner extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Start
-     */
+    int mouseX, mouseY;
+    
     public Winner() {
         initComponents();
     }
@@ -47,10 +46,22 @@ public class Winner extends javax.swing.JFrame {
         tails = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
         setSize(new java.awt.Dimension(800, 500));
 
         bg.setBackground(new java.awt.Color(51, 255, 51));
         bg.setPreferredSize(new java.awt.Dimension(800, 500));
+        bg.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                bgMouseDragged(evt);
+            }
+        });
+        bg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                bgMousePressed(evt);
+            }
+        });
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 255));
@@ -171,6 +182,17 @@ public class Winner extends javax.swing.JFrame {
         game.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_NuevoJuegoActionPerformed
+
+    private void bgMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMousePressed
+        mouseX = evt.getX();
+        mouseY = evt.getY();
+    }//GEN-LAST:event_bgMousePressed
+
+    private void bgMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - mouseX, y - mouseY);
+    }//GEN-LAST:event_bgMouseDragged
 
     /**
      * @param args the command line arguments

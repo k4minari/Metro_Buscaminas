@@ -209,7 +209,9 @@ public class TableroUI extends JFrame {
     public void derrota() {
         logica.derrota();
         if (timerSwing != null) timerSwing.stop();
-        JOptionPane.showMessageDialog(this, "¡Perdiste!");
+        Loser perder = new Loser();
+        perder.setVisible(true);
+        this.setVisible(false);
     }
 
     /**
@@ -220,7 +222,9 @@ public class TableroUI extends JFrame {
         logica.checkIfWin();
         if (logica.isGameOver()) {
             if (timerSwing != null) timerSwing.stop();
-            JOptionPane.showMessageDialog(this, "¡Ganaste!");
+            Winner ganar = new Winner();
+            ganar.setVisible(true);
+            this.setVisible(false);
         }
     }
 
