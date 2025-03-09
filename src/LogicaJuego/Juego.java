@@ -61,6 +61,8 @@ public class Juego {
                 } catch (IOException e) {
                     e.printStackTrace();
                     JOptionPane.showMessageDialog(null, "Error al cargar el archivo CSV");
+                    Start menu = new Start();
+                    menu.setVisible(true);
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Operación cancelada.");
