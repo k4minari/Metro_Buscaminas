@@ -35,8 +35,8 @@ public class Loser extends javax.swing.JFrame {
         boom = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Perdiste1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        NuevoJuego = new javax.swing.JButton();
+        menu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 500));
@@ -89,17 +89,27 @@ public class Loser extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 760, 50));
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 0));
-        jButton1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("NUEVO JUEGO");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 380, -1));
+        NuevoJuego.setBackground(new java.awt.Color(0, 153, 0));
+        NuevoJuego.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        NuevoJuego.setForeground(new java.awt.Color(255, 255, 255));
+        NuevoJuego.setText("NUEVO JUEGO");
+        NuevoJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NuevoJuegoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NuevoJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 380, -1));
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 0));
-        jButton5.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("MENU DE INICIO");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 380, -1));
+        menu.setBackground(new java.awt.Color(0, 0, 0));
+        menu.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        menu.setForeground(new java.awt.Color(255, 255, 255));
+        menu.setText("MENU DE INICIO");
+        menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuActionPerformed(evt);
+            }
+        });
+        jPanel1.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 380, -1));
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 760, 460));
 
@@ -117,6 +127,18 @@ public class Loser extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
+        Start menu = new Start();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_menuActionPerformed
+
+    private void NuevoJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoJuegoActionPerformed
+        New_game game = new New_game();
+        game.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_NuevoJuegoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,15 +176,15 @@ public class Loser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton NuevoJuego;
     private javax.swing.JLabel Perdiste;
     private javax.swing.JLabel Perdiste1;
     private javax.swing.JLabel Tails;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel boom;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton menu;
     private javax.swing.JLabel raya1;
     private javax.swing.JLabel raya2;
     // End of variables declaration//GEN-END:variables

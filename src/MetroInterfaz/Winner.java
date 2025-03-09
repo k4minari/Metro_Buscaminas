@@ -94,12 +94,22 @@ public class Winner extends javax.swing.JFrame {
         NuevoJuego.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         NuevoJuego.setForeground(new java.awt.Color(255, 255, 255));
         NuevoJuego.setText("NUEVO JUEGO");
+        NuevoJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NuevoJuegoActionPerformed(evt);
+            }
+        });
         jPanel1.add(NuevoJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 380, -1));
 
         Menu.setBackground(new java.awt.Color(0, 0, 0));
         Menu.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         Menu.setForeground(new java.awt.Color(255, 255, 255));
         Menu.setText("MENU DE INICIO");
+        Menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuActionPerformed(evt);
+            }
+        });
         jPanel1.add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 380, -1));
 
         paint1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N
@@ -149,6 +159,18 @@ public class Winner extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuActionPerformed
+        Start menu = new Start();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_MenuActionPerformed
+
+    private void NuevoJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoJuegoActionPerformed
+        New_game game = new New_game();
+        game.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_NuevoJuegoActionPerformed
 
     /**
      * @param args the command line arguments
