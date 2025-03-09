@@ -71,7 +71,6 @@ public class New_game extends javax.swing.JFrame {
 
         menu.setBackground(new java.awt.Color(255, 255, 226));
         menu.setFont(new java.awt.Font("Impact", 0, 22)); // NOI18N
-        menu.setForeground(new java.awt.Color(0, 0, 0));
         menu.setText("<<REGRESAR");
         menu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,21 +80,18 @@ public class New_game extends javax.swing.JFrame {
         jPanel1.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 30));
 
         Columnas.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
-        Columnas.setForeground(new java.awt.Color(0, 0, 0));
         Columnas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Columnas.setText("COLUMNAS");
         Columnas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(Columnas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 130, 50));
 
         Minas.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
-        Minas.setForeground(new java.awt.Color(0, 0, 0));
         Minas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Minas.setText("MINAS");
         Minas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(Minas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 140, 50));
 
         filas.setFont(new java.awt.Font("Impact", 0, 28)); // NOI18N
-        filas.setForeground(new java.awt.Color(0, 0, 0));
         filas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         filas.setText("FILAS");
         filas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -115,14 +111,21 @@ public class New_game extends javax.swing.JFrame {
 
         jSpinner_Mina.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jSpinner_Mina.setModel(new javax.swing.SpinnerNumberModel(1, 1, 100, 1));
+        jSpinner_Mina.setEditor(new javax.swing.JSpinner.NumberEditor(jSpinner_Mina, ""));
+        jSpinner_Mina.setRequestFocusEnabled(false);
         jPanel1.add(jSpinner_Mina, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 60, 30));
 
         jSpinner_Columna.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jSpinner_Columna.setModel(new javax.swing.SpinnerNumberModel(3, 3, 10, 1));
+        jSpinner_Columna.setEditor(new javax.swing.JSpinner.NumberEditor(jSpinner_Columna, ""));
+        jSpinner_Columna.setRequestFocusEnabled(false);
         jPanel1.add(jSpinner_Columna, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 60, 30));
 
         jSpinner_Filas.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jSpinner_Filas.setModel(new javax.swing.SpinnerNumberModel(3, 3, 10, 1));
+        jSpinner_Filas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSpinner_Filas.setEditor(new javax.swing.JSpinner.NumberEditor(jSpinner_Filas, ""));
+        jSpinner_Filas.setRequestFocusEnabled(false);
         jPanel1.add(jSpinner_Filas, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 60, 30));
 
         paint1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/png-clipart-poster-decorations-white-paint-removebg-preview.png"))); // NOI18N

@@ -188,6 +188,7 @@ public class Start extends javax.swing.JFrame {
     private void Continuar_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Continuar_buttonActionPerformed
         Juego juego = new Juego();
         juego.cargarJuego();
+        this.setVisible(false);
     }//GEN-LAST:event_Continuar_buttonActionPerformed
 
     private void TutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TutorialActionPerformed
