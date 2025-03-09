@@ -38,8 +38,7 @@ public class Tablero {
     private boolean usaBFS;
     private boolean gameOver;
     private int segundosTranscurridos;
-    private int minasRestantes;
-    
+    private int minasRestantes; 
     private Graph arbolRecorrido; // Para BFS/DFS con GraphStream
     
     /**
@@ -111,7 +110,7 @@ public class Tablero {
      * Verifica si se han marcado todas las minas (checkIfWin).
      * Si todas están marcadas, gameOver pasa a true indicando victoria.
      */
-    public void checkIfWin() {
+    public void victoria() {
         NodoCasilla actual = listaMinas.getCabeza();
         while (actual != null) {
             if (!actual.getCasilla().isMarcada()) {
@@ -355,60 +354,40 @@ public class Tablero {
      * La primera línea incluye: filas,columnas,numMinas,minasRestantes,usaBFS,gameOver,segundosTranscurridos
      * y luego cada casilla en líneas separadas.
      */
-    public void guardarPartidaEnCSV() {
-        JFileChooser fc = new JFileChooser();
-        fc.setDialogTitle("Guardar partida en CSV");
+    public boolean guardarCSV() {
+    JFileChooser fc = new JFileChooser();
+    fc.setDialogTitle("Guardar partida en CSV");
+    
+    int userSelection = fc.showSaveDialog(null);
+    if (userSelection == JFileChooser.APPROVE_OPTION) {
+        File archivo = fc.getSelectedFile();
         
-        int userSelection = fc.showSaveDialog(null);
-        if (userSelection == JFileChooser.APPROVE_OPTION) {
-            File archivo = fc.getSelectedFile();
+        try (PrintWriter pw = new PrintWriter(new FileWriter(archivo))) {
+            // Guardar datos en el CSV...
             
-            try (PrintWriter pw = new PrintWriter(new FileWriter(archivo))) {
-                // 1) Primera línea con la configuración general
-                pw.println(
-                    this.filas + "," 
-                    + this.columnas + "," 
-                    + this.numMinas + "," 
-                    + this.minasRestantes + "," 
-                    + this.usaBFS + "," 
-                    + this.gameOver + ","
-                    + this.segundosTranscurridos
-                );
-                
-                // 2) Cada casilla en su propia línea
-                // fila,columna,tieneMina,barrida,marcada,minasAdyacentes
-                NodoCasilla actual = this.casillas.getCabeza();
-                while (actual != null) {
-                    Casilla c = actual.getCasilla();
-                    pw.println(
-                        c.getFila() + "," 
-                        + c.getColumna() + "," 
-                        + c.isTieneMina() + "," 
-                        + c.isBarrida() + "," 
-                        + c.isMarcada() + "," 
-                        + c.getMinasAdyacentes()
-                    );
-                    actual = actual.getSiguiente();
-                }
-                
-                JOptionPane.showMessageDialog(
-                    null,
-                    "Partida guardada en:\n" + archivo.getAbsolutePath()
-                );
-                
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(
-                    null,
-                    "Error al guardar la partida.\n" + e.getMessage()
-                );
-            }
-        } else {
             JOptionPane.showMessageDialog(
                 null,
-                "Operación cancelada. No se guardó la partida."
+                "Partida guardada en:\n" + archivo.getAbsolutePath()
             );
+            return true; // Indica que el guardado fue exitoso
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(
+                null,
+                "Error al guardar la partida.\n" + e.getMessage()
+            );
+            return false;
         }
+    } else {
+        // Se canceló el guardado
+        JOptionPane.showMessageDialog(
+            null,
+            "Operación cancelada. No se guardó la partida."
+        );
+        return false;
     }
+}
 
     /**
      * Crea un Tablero a partir de un archivo CSV.
@@ -419,7 +398,7 @@ public class Tablero {
      * @return El Tablero reconstruido según el CSV.
      * @throws IOException Si el archivo no es válido o hay error de lectura.
      */
-    public static Tablero fromCSV(File archivo) throws IOException {
+    public static Tablero cargarCSV(File archivo) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             
             //Leer config general:

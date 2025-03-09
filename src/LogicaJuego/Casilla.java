@@ -14,8 +14,8 @@ import EDDauxiliares.ListaAdyacencia;
  * Representa una celda en el tablero de Buscaminas.
  */
 public class Casilla {
-    private int fila;
-    private int columna;
+    private final int fila;
+    private final int columna;
     private boolean tieneMina;
     private boolean barrida;
     private boolean marcada;
@@ -47,8 +47,7 @@ public class Casilla {
     public boolean isMarcada() { return marcada; }
     public void setMarcada(boolean marcada) { this.marcada = marcada; }
     public int getMinasAdyacentes() { return minasAdyacentes; }
-    public void setMinasAdyacentes(int minasAdyacentes) { this.minasAdyacentes = minasAdyacentes; }
-    
+    public void setMinasAdyacentes(int minasAdyacentes) { this.minasAdyacentes = minasAdyacentes; } 
     public ListaAdyacencia getAdyacentes() { return adyacentes; }
     public void setAdyacentes(ListaAdyacencia adyacentes) { this.adyacentes = adyacentes; }
     

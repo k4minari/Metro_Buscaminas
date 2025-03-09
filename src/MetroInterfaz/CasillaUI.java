@@ -52,7 +52,7 @@ import javax.swing.JButton;
                             } else {
                                 tableroUI.getLogica().barridoDFS(casilla);
                             }
-                            tableroUI.checkIfWin();
+                            tableroUI.victoria();
                         }
                     }
                 } else if (e.getButton() == MouseEvent.BUTTON3) {
@@ -61,7 +61,7 @@ import javax.swing.JButton;
                         return;
                     }
                     marcar();
-                    tableroUI.checkIfWin();
+                    tableroUI.victoria();
                 }
                 // Refrescar toda la interfaz de casillas
                 tableroUI.refrescarTableroUI();

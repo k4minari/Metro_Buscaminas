@@ -40,7 +40,7 @@ public class ListaCasillaUI {
     /**
      * Recorre la lista y actualiza cada CasillaUI (por ejemplo, refrescar su botón).
      */
-    public void refrescarTodo() {
+    public void refrescar() {
         NodoCasillaUI actual = cabeza;
         while (actual != null) {
             actual.getCasillaUI().actualizarBoton();

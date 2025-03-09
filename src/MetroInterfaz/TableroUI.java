@@ -34,15 +34,15 @@ import org.graphstream.ui.view.Viewer;
  */
 
 public class TableroUI extends JFrame {
-    private Tablero logica;
-    private JLabel tiempoNumLabel;
-    private JLabel minasNumLabel;
+    private final Tablero logica;
+    private final JLabel tiempoNumLabel;
+    private final JLabel minasNumLabel;
     private Timer timerSwing;
     private int segundosTranscurridosUI;
-    private JButton botonCerrar;
+    private final JButton botonCerrar;
 
-    /** Lista enlazada manual de CasillaUI. */
-    private ListaCasillaUI listaCasillasUI;
+    /** Lista enlazada de CasillaUI. */
+    private final ListaCasillaUI listaCasillasUI;
 
     /**
      * Constructor que recibe el Tablero lógico y crea la ventana (JFrame),
@@ -90,11 +90,17 @@ public class TableroUI extends JFrame {
                 "Cerrar sin guardar"
             );
             if (opcion == 0) {
-                System.exit(0);
+                this.dispose();
+                Start menu = new Start();
+                menu.setVisible(true);
             } else if (opcion == 1) {
-                logica.guardarPartidaEnCSV();
-                System.exit(0);
-            }
+                // Opción "Guardar y salir"
+                boolean guardado = logica.guardarCSV(); // Retorna `true` si se guardó correctamente
+                if (guardado) { // Solo cerrar si el guardado fue exitoso
+                    this.dispose();
+                    Start menu = new Start();
+                    menu.setVisible(true);
+        }}
         });
         add(botonCerrar);
 
@@ -218,8 +224,8 @@ public class TableroUI extends JFrame {
      * Verifica si se ha ganado (checkIfWin en la lógica) y si es así,
      * detiene el timer y muestra un mensaje.
      */
-    public void checkIfWin() {
-        logica.checkIfWin();
+    public void victoria() {
+        logica.victoria();
         if (logica.isGameOver()) {
             if (timerSwing != null) timerSwing.stop();
             Winner ganar = new Winner();
@@ -233,7 +239,7 @@ public class TableroUI extends JFrame {
      * para que cada CasillaUI actualice su apariencia.
      */
     public void refrescarTableroUI() {
-        listaCasillasUI.refrescarTodo();
+        listaCasillasUI.refrescar();
     }
 
     /**
