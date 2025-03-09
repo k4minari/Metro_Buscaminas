@@ -1,6 +1,5 @@
 package LogicaJuego;
 
-import MetroInterfaz.Start;
 import EDDauxiliares.Cola; 
 import EDDauxiliares.ListaCasillas;
 import EDDauxiliares.NodoCasilla;
