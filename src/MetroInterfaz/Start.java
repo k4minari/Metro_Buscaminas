@@ -4,6 +4,7 @@
  */
 package MetroInterfaz;
 
+import LogicaJuego.Juego;
 /**
  *
  * @author ile1
@@ -185,7 +186,8 @@ public class Start extends javax.swing.JFrame {
     }//GEN-LAST:event_New_game_button1ActionPerformed
 
     private void Continuar_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Continuar_buttonActionPerformed
-        // TODO add your handling code here:
+        Juego juego = new Juego();
+        juego.cargarJuego();
     }//GEN-LAST:event_Continuar_buttonActionPerformed
 
     private void TutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TutorialActionPerformed

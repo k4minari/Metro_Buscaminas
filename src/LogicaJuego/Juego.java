@@ -89,44 +89,6 @@ public class Juego {
     }
 
     /**
-     * Muestra un cuadro de diálogo donde el usuario elige:
-     * - Nuevo Juego
-     * - Cargar Juego
-     * - Cancelar
-     * 
-     * Si elige "Nuevo Juego", se crean 8x8 con 12 minas (puede cambiarse).
-     * Si elige "Cargar Juego", se llama a cargarJuego().
-     * Si elige "Cancelar", no hace nada.
-     */
-    public void seleccionarModoJuego() {
-        String[] opciones = {"Nuevo Juego", "Cargar Juego", "Cancelar"};
-        int eleccion = JOptionPane.showOptionDialog(
-            null,
-            "Seleccione una opción:",
-            "Modo de Juego",
-            JOptionPane.DEFAULT_OPTION,
-            JOptionPane.INFORMATION_MESSAGE,
-            null,
-            opciones,
-            opciones[0]
-        );
-        
-        if (eleccion == 0) {
-            int filas = 8;
-            int columnas = 8;
-            int numMinas = 12;
-            iniciarJuegoNuevo(filas, columnas, numMinas);
-        } 
-        else if (eleccion == 1) {
-            cargarJuego();
-        }
-        else {
-            // Cancelar => no hacer nada 
-            System.out.println("Modo de juego cancelado.");
-        }
-    }
-
-    /**
      * Calcula el puntaje al finalizar la partida, basado en:
      * - filas x columnas x 100
      * - numMinas
