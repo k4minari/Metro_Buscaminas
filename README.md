@@ -15,6 +15,8 @@ Este proyecto es una implementación del clásico juego Buscaminas utilizando gr
 # Instalación
 1. Clona este repositorio en tu máquina local
 2. Navega al directorio del proyecto
+3. Es necesario instalar la librería GraphStream
+4. Se deben colocar los archivos JAR correspondientes en las librerias a utilizar en las propiedades del proyecto
 
 # Uso
 Para ejecutar el juego, simplemente corre el archivo Metro_Buscaminas.jar
