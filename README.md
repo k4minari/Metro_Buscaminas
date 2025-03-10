@@ -4,7 +4,8 @@
 Este proyecto es una implementación del clásico juego Buscaminas utilizando grafos para manejar las funciones del tablero. El objetivo del juego es descubrir todas las celdas que no contienen minas, evitando aquellas que sí las tienen.
 
 # Características
--Implementación del tablero a través de grafos.
+
+-Implementación del tablero a través de grafos y el uso de listas de adyacencia.
 
 -Detección de minas y números adyacentes.
 
