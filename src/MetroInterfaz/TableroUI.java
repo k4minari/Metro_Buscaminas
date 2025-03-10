@@ -95,7 +95,8 @@ public class TableroUI extends JFrame {
                 menu.setVisible(true);
             } else if (opcion == 1) {
                 // Opción "Guardar y salir"
-                boolean guardado = logica.guardarCSV(); // Retorna `true` si se guardó correctamente
+                boolean guardado;
+                guardado = logica.guardarCSV(); // Retorna `true` si se guardó correctamente
                 if (guardado) { // Solo cerrar si el guardado fue exitoso
                     this.dispose();
                     Start menu = new Start();

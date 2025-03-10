@@ -353,7 +353,7 @@ public class Tablero {
      * La primera línea incluye: filas,columnas,numMinas,minasRestantes,usaBFS,gameOver,segundosTranscurridos
      * y luego cada casilla en líneas separadas.
      */
-    public boolean guardarCSV() {
+    public boolean guardarCSV() throws IOException {
     JFileChooser fc = new JFileChooser();
     fc.setDialogTitle("Guardar partida en CSV");
     
@@ -363,14 +363,38 @@ public class Tablero {
         
         try (PrintWriter pw = new PrintWriter(new FileWriter(archivo))) {
             // Guardar datos en el CSV...
-            
+            // 1) Primera línea con la configuración general
+                pw.println(
+                    this.filas + "," 
+                    + this.columnas + "," 
+                    + this.numMinas + "," 
+                    + this.minasRestantes + "," 
+                    + this.usaBFS + "," 
+                    + this.gameOver + ","
+                    + this.segundosTranscurridos
+                );
+                
+                // 2) Cada casilla en su propia línea
+                // fila,columna,tieneMina,barrida,marcada,minasAdyacentes
+                NodoCasilla actual = this.casillas.getCabeza();
+                while (actual != null) {
+                    Casilla c = actual.getCasilla();
+                    pw.println(
+                        c.getFila() + "," 
+                        + c.getColumna() + "," 
+                        + c.isTieneMina() + "," 
+                        + c.isBarrida() + "," 
+                        + c.isMarcada() + "," 
+                        + c.getMinasAdyacentes()
+                    );
+                    actual = actual.getSiguiente();}
             JOptionPane.showMessageDialog(
                 null,
                 "Partida guardada en:\n" + archivo.getAbsolutePath()
             );
             return true; // Indica que el guardado fue exitoso
 
-        } catch (Exception e) {
+        }catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(
                 null,
@@ -388,6 +412,15 @@ public class Tablero {
     }
 }
 
+    /**
+     * Crea un Tablero a partir de un archivo CSV.
+     * La primera línea contiene la configuración: filas,columnas,numMinas,minasRestantes,usaBFS,gameOver,segundosTranscurridos
+     * Luego cada línea describe una casilla con: fila,columna,tieneMina,barrida,marcada,minasAdyacentes
+     * 
+     * @param archivo Archivo CSV a leer.
+     * @return El Tablero reconstruido según el CSV.
+     * @throws IOException Si el archivo no es válido o hay error de lectura.
+     */
     /**
      * Crea un Tablero a partir de un archivo CSV.
      * La primera línea contiene la configuración: filas,columnas,numMinas,minasRestantes,usaBFS,gameOver,segundosTranscurridos
