@@ -12,6 +12,9 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -94,14 +97,18 @@ public class TableroUI extends JFrame {
                 Start menu = new Start();
                 menu.setVisible(true);
             } else if (opcion == 1) {
-                // Opción "Guardar y salir"
-                boolean guardado;
-                guardado = logica.guardarCSV(); // Retorna `true` si se guardó correctamente
-                if (guardado) { // Solo cerrar si el guardado fue exitoso
-                    this.dispose();
-                    Start menu = new Start();
-                    menu.setVisible(true);
-        }}
+                try {
+                    // Opción "Guardar y salir"
+                    boolean guardado;
+                    guardado = logica.guardarCSV(); // Retorna `true` si se guardó correctamente
+                    if (guardado) { // Solo cerrar si el guardado fue exitoso
+                        this.dispose();
+                        Start menu = new Start();
+                        menu.setVisible(true);
+                    }       } catch (IOException ex) {
+                    Logger.getLogger(TableroUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+}
         });
         add(botonCerrar);
 
