@@ -349,9 +349,10 @@ public class Tablero {
     }
 
     /**
-     * Guarda la partida en un archivo CSV, preguntando previamente con un JFileChooser.
-     * La primera línea incluye: filas,columnas,numMinas,minasRestantes,usaBFS,gameOver,segundosTranscurridos
-     * y luego cada casilla en líneas separadas.
+     * Guarda la partida en un archivo CSV, preguntando previamente con un JFileChooser.La primera línea incluye: filas,columnas,numMinas,minasRestantes,usaBFS,gameOver,segundosTranscurridos
+ y luego cada casilla en líneas separadas.
+     * @return 
+     * @throws java.io.IOException
      */
     public boolean guardarCSV() throws IOException {
     JFileChooser fc = new JFileChooser();
@@ -395,7 +396,6 @@ public class Tablero {
             return true; // Indica que el guardado fue exitoso
 
         }catch (Exception e) {
-            e.printStackTrace();
             JOptionPane.showMessageDialog(
                 null,
                 "Error al guardar la partida.\n" + e.getMessage()
